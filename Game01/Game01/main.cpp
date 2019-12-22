@@ -1,6 +1,8 @@
-#include "stdio.h"
+#include <iostream>
+#include "GLFW/glfw3.h"
 
 int main() {
-	printf("Hello world!");
-	return 0;
+	int a = glfwInit();
+	std::cout << a;
+	return a;
 }
