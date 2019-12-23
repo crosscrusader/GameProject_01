@@ -3,14 +3,14 @@
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
-void framebuffer_size_callback(GLFWwindow * window, int width, int height);
-void proccessInput(GLFWwindow * window);
+void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void proccessInput(GLFWwindow* window);
 
 unsigned int SCREEN_WIDTH = 800;
 unsigned int SCREEN_HEIGHT = 600;
 
 int main() {
-	
+
 	// Initializes glfw
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
@@ -30,7 +30,7 @@ int main() {
 	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
 
 
-	if (window == NULL) 
+	if (window == NULL)
 	{
 		std::cout << "Failed to create GLFW window" << std::endl;
 		glfwTerminate();
@@ -72,7 +72,7 @@ void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 
 void proccessInput(GLFWwindow* window)
 {
-	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) 
+	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 	{
 		glfwSetWindowShouldClose(window, true);
 	}
